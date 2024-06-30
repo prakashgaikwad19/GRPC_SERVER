@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "stubFiles";
+
+service userms{
+	rpc login(LoginReq) returns(LoginResp);
+}
+
+message LoginReq{
+	string username = 1;
+	string password = 2;
+}
+
+message LoginResp{
+	string responseMessage = 1;
+	string responseCode = 2;
+}
